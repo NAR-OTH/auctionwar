@@ -11,11 +11,13 @@ from telegram.ext import (
 )
 from config import BOT_TOKEN
 from database import init_db
-from handlers import (
-    start_handler, join_handler, team_handler,
-    work_handler, attack_handler, auction_handler,
-    leader_handler, status_handler, help_handler
-)
+from general import start_handler, help_handler
+from team_handler import join_handler, team_handler
+from player import work_handler, attack_handler
+from auction_handler import auction_handler
+from leader_handler import leader_handler
+# أي ملف ثاني ناقص استدعيه بنفس الطريقة
+
 from callbacks import button_callback_handler
 from auction_manager import schedule_auction
 
